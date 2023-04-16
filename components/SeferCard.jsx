@@ -11,6 +11,7 @@ const SeferCard = ({
   koltukTipi,
 }) => {
   const navigation = useNavigation();
+
   return (
     <Card style={styles.containerCard}>
       <Card.Actions style={{}}>
