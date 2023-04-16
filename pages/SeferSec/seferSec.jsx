@@ -10,21 +10,21 @@ function SeferSec() {
         fiyat="500"
         kalkisSaati="20:30"
         bosKoltuk={8}
-        koltukTipi={"2 + 2"}
+        koltukTipi="2 + 2"
       />
       <SeferCard
         firmaName={"Varan"}
         fiyat="250"
         kalkisSaati="14:00"
         bosKoltuk={15}
-        koltukTipi={"2 + 1"}
+        koltukTipi="2 + 1"
       />
       <SeferCard
         firmaName={"Kamil Koç"}
         fiyat="300"
         kalkisSaati="00:30"
         bosKoltuk={1}
-        koltukTipi={"2 + 1"}
+        koltukTipi="2 + 1"
       />
     </ScrollView>
   );

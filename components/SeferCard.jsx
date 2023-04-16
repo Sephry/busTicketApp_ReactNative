@@ -15,7 +15,14 @@ const SeferCard = ({
   return (
     <Card style={styles.containerCard}>
       <Card.Actions style={{}}>
-        <Card.Content style={{}}>
+        <Card.Content
+          style={{
+            display: "flex",
+            position: "absolute",
+            start: 3,
+            borderWidth: 1,
+          }}
+        >
           <Text style={styles.firmaText}>{firmaName}</Text>
         </Card.Content>
         <Card.Content style={{}}>
@@ -35,7 +42,15 @@ const SeferCard = ({
         </Card.Content>
         <TouchableOpacity
           style={styles.btnSec}
-          onPress={() => navigation.navigate("Sefer Detay")}
+          onPress={() =>
+            navigation.navigate("Sefer Detay", {
+              firmaName: firmaName,
+              koltukTipi: koltukTipi,
+              bosKoltuk: bosKoltuk,
+              kalkisSaati: kalkisSaati,
+              fiyat: fiyat,
+            })
+          }
         >
           <Text style={styles.cardtext}>Koltuk Seç</Text>
         </TouchableOpacity>

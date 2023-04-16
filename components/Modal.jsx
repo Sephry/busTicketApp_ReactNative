@@ -3,10 +3,12 @@ import { View } from "react-native";
 import { List, Divider, useTheme } from "react-native-paper";
 
 const Modal = () => {
-  const [expanded, setExpanded] = React.useState(true);
+  const [expanded, setExpanded] = React.useState(false);
 
   const handlePress = () => setExpanded(!expanded);
   const theme = useTheme();
+  const [nereden, setNereden] = React.useState("");
+  const [nereye, setNereye] = React.useState("");
 
   return (
     <View style={{ width: "80%" }}>
@@ -14,7 +16,7 @@ const Modal = () => {
         <List.Accordion
           titleStyle={{ color: theme.colors.textColor }}
           style={{ color: theme.colors.secondColor }}
-          title="Nereden"
+          title={nereden || "Nereden"}
         >
           <List.Item
             style={{
@@ -23,7 +25,7 @@ const Modal = () => {
             }}
             titleStyle={{ color: theme.colors.textColor }}
             title="Ankara"
-            onPress={() => console.log("tiklandi")}
+            onPress={() => setNereden("Ankara")}
           />
           <List.Item
             style={{
@@ -32,7 +34,7 @@ const Modal = () => {
             }}
             titleStyle={{ color: theme.colors.textColor }}
             title="İstanbul"
-            onPress={() => console.log("tiklandi")}
+            onPress={() => setNereden("İstanbul")}
           />
 
           <List.Item
@@ -42,7 +44,7 @@ const Modal = () => {
             }}
             titleStyle={{ color: theme.colors.textColor }}
             title="Bolu"
-            onPress={() => console.log("tiklandi")}
+            onPress={() => setNereden("Bolu")}
           />
         </List.Accordion>
 
@@ -55,7 +57,7 @@ const Modal = () => {
         <List.Accordion
           titleStyle={{ color: theme.colors.textColor }}
           style={{ color: theme.colors.secondColor }}
-          title="Nereye"
+          title={nereye || "Nereye"}
           expanded={expanded}
           onPress={handlePress}
         >
@@ -65,7 +67,7 @@ const Modal = () => {
               borderWidth: 1,
             }}
             titleStyle={{ color: theme.colors.textColor }}
-            onPress={() => console.log("tiklandi")}
+            onPress={() => setNereye("Ankara")}
             title="Ankara"
           />
           <List.Item
@@ -75,7 +77,7 @@ const Modal = () => {
             }}
             titleStyle={{ color: theme.colors.textColor }}
             title="İstanbul"
-            onPress={() => console.log("tiklandi")}
+            onPress={() => setNereye("İstanbul")}
           />
           <List.Item
             style={{
@@ -84,7 +86,7 @@ const Modal = () => {
             }}
             titleStyle={{ color: theme.colors.textColor }}
             title="Bolu"
-            onPress={() => console.log("tiklandi")}
+            onPress={() => setNereye("Bolu")}
           />
         </List.Accordion>
       </List.Section>

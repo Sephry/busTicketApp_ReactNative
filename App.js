@@ -11,6 +11,7 @@ import Register from "./pages/Register/register";
 import BiletAra from "./pages/BiletAra/biletAra";
 import SeferSec from "./pages/SeferSec/seferSec";
 import SeferDetay from "./pages/SeferDetay/seferDetay";
+import OdemeEkrani from "./pages/OdemeEkrani/odemeEkrani";
 
 const Stack = createNativeStackNavigator();
 
@@ -39,6 +40,7 @@ const Navigator = () => {
       <Stack.Screen name="Bilet Ara" component={BiletAra} />
       <Stack.Screen name="Sefer Sec" component={SeferSec} />
       <Stack.Screen name="Sefer Detay" component={SeferDetay} />
+      <Stack.Screen name="Odeme Ekrani" component={OdemeEkrani} />
     </Stack.Navigator>
   );
 };
