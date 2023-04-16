@@ -1,15 +1,30 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import { Card } from "react-native-paper";
 
-const SeferCard = ({ firmaName, fiyat, kalkisSaati }) => {
+const SeferCard = ({
+  firmaName,
+  fiyat,
+  kalkisSaati,
+  bosKoltuk,
+  koltukTipi,
+}) => {
   const navigation = useNavigation();
   return (
     <Card style={styles.containerCard}>
-      <Card.Content style={styles.firmaCard}>
-        <Text style={styles.firmaText}>{firmaName}</Text>
-      </Card.Content>
+      <Card.Actions style={{}}>
+        <Card.Content style={{}}>
+          <Text style={styles.firmaText}>{firmaName}</Text>
+        </Card.Content>
+        <Card.Content style={{}}>
+          <Text style={styles.firmaText}>{koltukTipi}</Text>
+        </Card.Content>
+        <Card.Content style={{}}>
+          <Text style={styles.firmaText}>{bosKoltuk} Bos Koltuk</Text>
+        </Card.Content>
+      </Card.Actions>
+
       <Card.Actions>
         <Card.Content style={{}}>
           <Text style={styles.firmaText}>{kalkisSaati}</Text>
@@ -30,12 +45,10 @@ const SeferCard = ({ firmaName, fiyat, kalkisSaati }) => {
 
 const styles = StyleSheet.create({
   containerCard: {
-    flex: 1,
     padding: 5,
     margin: 5,
     backgroundColor: "#415A77",
   },
-  firmaCard: {},
   firmaText: {
     fontSize: 20,
     color: "#E0E1DD",

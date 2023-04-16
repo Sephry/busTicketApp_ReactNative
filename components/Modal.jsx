@@ -17,17 +17,29 @@ const Modal = () => {
           title="Nereden"
         >
           <List.Item
+            style={{
+              backgroundColor: theme.colors.threeColor,
+              borderWidth: 1,
+            }}
             titleStyle={{ color: theme.colors.textColor }}
             title="Ankara"
             onPress={() => console.log("tiklandi")}
           />
           <List.Item
+            style={{
+              backgroundColor: theme.colors.threeColor,
+              borderWidth: 1,
+            }}
             titleStyle={{ color: theme.colors.textColor }}
             title="İstanbul"
             onPress={() => console.log("tiklandi")}
           />
 
           <List.Item
+            style={{
+              backgroundColor: theme.colors.threeColor,
+              borderWidth: 1,
+            }}
             titleStyle={{ color: theme.colors.textColor }}
             title="Bolu"
             onPress={() => console.log("tiklandi")}
@@ -48,16 +60,28 @@ const Modal = () => {
           onPress={handlePress}
         >
           <List.Item
+            style={{
+              backgroundColor: theme.colors.threeColor,
+              borderWidth: 1,
+            }}
             titleStyle={{ color: theme.colors.textColor }}
             onPress={() => console.log("tiklandi")}
             title="Ankara"
           />
           <List.Item
+            style={{
+              backgroundColor: theme.colors.threeColor,
+              borderWidth: 1,
+            }}
             titleStyle={{ color: theme.colors.textColor }}
             title="İstanbul"
             onPress={() => console.log("tiklandi")}
           />
           <List.Item
+            style={{
+              backgroundColor: theme.colors.threeColor,
+              borderWidth: 1,
+            }}
             titleStyle={{ color: theme.colors.textColor }}
             title="Bolu"
             onPress={() => console.log("tiklandi")}
